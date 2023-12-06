@@ -1,0 +1,18 @@
+{%extends 'empapp/home.html'%}
+{%block body_block%}
+{%load static%}
+<link rel="stylesheet" href="{%static "css/style.css" %}">
+<center>
+<h4>HR MANAGER REQUIRED LOGIN TO ENTER HIS SECTION</h4>
+
+<form method="POST">
+	{%csrf_token%}
+	{{form.as_p}}
+	<button>LOGIN</button>
+	
+</form>
+
+
+
+</center>
+{%endblock%}

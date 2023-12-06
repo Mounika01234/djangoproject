@@ -1,0 +1,15 @@
+{%extends 'empapp/home.html'%}
+{%block body_block%}
+{%load static%}
+
+<link rel="stylesheet" href="{%static "css/style.css" %}">
+<center>
+<h2>ADD HOLIDAYS</h2>
+<form method="POST">
+	{%csrf_token%}
+	{{form.as_p}}
+	<button>SUBMIT</button>
+	
+</form>
+</center>
+{%endblock%}

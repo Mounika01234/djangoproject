@@ -1,0 +1,26 @@
+{%extends 'empapp/home.html'%}
+{%block body_block%}
+{%load static%}
+
+<link rel="stylesheet" href="{%static "css/style.css" %}">
+
+<center>
+	<h2>HOLIDAYS CALENDER</h2>
+	<table border=4px;>
+		<thead>
+			<th>DATE</th>
+			<th>OCCATION</th>
+		    <th>DETAILS</th>
+		</thead>
+		{%for j in c%}
+		<tr>
+			<td>{{j.date}}</td>
+			<td>{{j.occation}}</td>
+			<td>{{j.details}}</td>
+
+		</tr>
+		{%endfor%}
+	</table>
+	<a href="/latest/"><button>LATEST NEWS</button>
+</center>
+{%endblock%}

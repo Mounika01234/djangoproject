@@ -1,0 +1,32 @@
+{%extends 'empapp/home.html'%}
+{%block body_block%}
+{%load static%}
+<link rel="stylesheet" href="{%static "css/style.css" %}">
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<center>
+	<h2>Update Form</h2>
+	<form method="POST">
+		{%csrf_token%}
+		EMP NAME <input type='text' name='emp_name' value='{{e.emp_name}}'/><br>
+		EMP ID <input type='text' name='emp_id' value='{{e.emp_id}}'/><br>
+		DESIGNATION <input type='text' name='designation' value='{{e.designation}}'/><br>
+		DATE OF JOINING <input type='text' name='date_of_joining' value='{{e.date_of_joining}}'/><br>
+		DEPARTMENT <input type='text' name='department' value='{{e.department}}'/><br>
+		SALARY <input type='text' name='salary' value='{{e.salary}}'/><br>
+		EXPERIENCE <input type='text' name='experience' value='{{e.experience}}'/><br>
+	   <button>SUBMIT</button>
+	</form>
+</center>
+
+		
+
+</body>
+</html>
+{%endblock%}

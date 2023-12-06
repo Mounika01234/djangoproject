@@ -1,0 +1,37 @@
+{%extends 'empapp/home.html'%}
+{%block body_block%}
+{%load static%}
+<link rel="stylesheet" href="{%static "css/style.css" %}">
+
+<center>
+<h2>EMPLOYEE DATA</h2>
+<table border="3px";>
+	<thead>
+	<th>EMP NAME</th>
+	<th>EMP ID</th>
+	<th>DESIGNATION</th>
+	<th>DATE OF JOINING</th>
+	<th>DEPARTMENT</th>
+	<th>SALARY</th>
+	<th>EXPERIENCE</th>
+	<th>HR SECTION</th>
+	</thead>
+	{%for i in e%}
+	<tr>
+		<td>{{i.emp_name}}</td>
+		<td>{{i.emp_id}}</td>
+		<td>{{i.designation}}</td>
+		<td>{{i.date_of_joining}}</td>
+		<td>{{i.department}}</td>
+		<td>{{i.salary}}</td>
+		<td>{{i.experience}}</td>
+		<td><a href="/update/{{i.id}}"><button>UPDATE</button></a><a href="/delete/{{i.id}}"><button>DELETE</button></a></td>
+	</tr>
+	{%endfor%}
+	
+</table>
+<a href="/edata"><button>ADD EMPLOYEE</button></a>
+<a href="/hr"><button>BACK TO HR SECTION</button></a>
+<a href="/data"><button>DOWNLOAD</button></a>
+</center>
+{%endblock%}

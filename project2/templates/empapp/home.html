@@ -1,0 +1,36 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+</head>
+<body>
+<div class="navbar navbar-default">      
+        <div class="container">
+<div class="navbar-header"> 
+
+<img src="{%static "images/logoc.jpg"%}" class='logo'/>           
+<a class="navbar-brand" href="#"></a>    
+</div>
+<ul class="nav navbar-nav ">
+    <li><a href="/home">HOME</a></li>
+    <li><a href="/hr">HR MANAGER</a></li>
+    <li><a href="/employee">EMPLOYEE</a></li>
+</div>
+       </div>
+
+{%block body_block%}
+
+<center>
+    <link rel="stylesheet" href="{%static "css/style.css" %}">
+
+    <img src="{%static "/images/hm.png" %}" class='img'>
+
+    <h2>Welcome To XYZ OFFICE</h2>
+    <p>An office employee is anyone who works at an office, usually doing clerical work. Sometimes they are called receptionists or administrative assistants. They perform all of the administrative work that helps keep an office running so that the other workers can fulfill the company's purpose.An office employee handles basic organizational tasks like keeping accurate records and opening customer accounts. They are the face of the office, welcoming visitors and answering any questions in person, via email, or over the phone. Office employees need to be highly organized and have excellent customer service skills to do their job.Dedication includes a strong sense of support and loyalty to a business or career role. Committed employees are often more purpose-driven in both their personal lives and their careers.A dedicated employee doesn’t need extensive experience in their field, but they’re willing to put in the training and work required to gain any necessary experience. They are goal-orientated and are more likely to strengthen any qualities they may need to improve.Confidence and productivity often work well together. Confident employees not only believe in their abilities to manage tasks, but they are also more likely to convince managers, coworkers and customers of their abilities as well. </p>
+</center>
+
+{%endblock%}
+</body>
